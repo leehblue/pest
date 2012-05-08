@@ -128,7 +128,7 @@ class Pest {
     $curl = curl_init($url);
     
     foreach ($opts as $opt => $val)
-      curl_setopt($curl, $opt, $val);
+      @curl_setopt($curl, $opt, $val);
       
     $this->last_request = array(
       'url' => $url
